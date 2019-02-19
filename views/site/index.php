@@ -22,14 +22,16 @@ $this->params['active'] = '';
         <div class="row">
             <div class="col-md-6">
                 <div class="image">
-                    <img src="img/services/repair_watch.jpg" alt="" class="img-responsive">
+                    <img src="/img/kws_images/kws_30.jpg" alt="" class="img-responsive">
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="thumbnail">
                     <div class="caption text-center">
                         <h4><a href="<?= \yii\helpers\Url::to('/site/services') ?>">РЕМОНТ ЧАСОВ</a></h4>
-                        <p>Сервисный центр по ремонту и обслуживанию швейцарских часов. Гарантийный Ремонт любых Часовых Механизмов.</p>
+                        <p>Сервисный центр по ремонту и обслуживанию швейцарских часов.
+                            Гарантийный Ремонт любых Часовых Механизмов.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -43,13 +45,13 @@ $this->params['active'] = '';
                 <div class="thumbnail">
                     <div class="caption text-center">
                         <h4><a href="<?= \yii\helpers\Url::to('/site/services') ?>">ДИАГНОСТИКА ЧАСОВ</a></h4>
-                        <p>Проверка точности, герметичности и восстановление в наручных часах с последующей регулировкой. Профилактический осмотр.</p>
+                        <p>Проверка точности, герметичности и восстановление в наручных часах с последующей регулировкой. Профилактический осмотр.</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="image">
-                    <img src="img/services/diag_watch.jpg" alt="" class="img-responsive">
+                    <img src="/img/kws_images/kws_5.jpg" alt="" class="img-responsive">
                 </div>
             </div>
         </div>
@@ -60,7 +62,7 @@ $this->params['active'] = '';
         <div class="row">
             <div class="col-md-6">
                 <div class="image">
-                    <img src="img/services/battery_watch.jpg" alt="" class="img-responsive">
+                    <img src="/img/kws_images/kws_7.jpg" alt="" class="img-responsive">
                 </div>
             </div>
             <div class="col-md-6">
@@ -87,7 +89,7 @@ $this->params['active'] = '';
             </div>
             <div class="col-md-6">
                 <div class="image">
-                    <img src="img/services/broken_glass_watch.jpg" alt="" class="img-responsive">
+                    <img src="/img/kws_images/kws_9.jpg" alt="" class="img-responsive">
                 </div>
             </div>
         </div>
@@ -98,7 +100,7 @@ $this->params['active'] = '';
         <div class="row">
             <div class="col-md-6">
                 <div class="image">
-                    <img src="img/services/watchband.jpg" alt="" class="img-responsive">
+                    <img src="/img/kws_images/kws_1.jpg" alt="" class="img-responsive">
                 </div>
             </div>
             <div class="col-md-6">
@@ -125,7 +127,7 @@ $this->params['active'] = '';
             </div>
             <div class="col-md-6">
                 <div class="image">
-                    <img src="img/services/restore_watch.jpg" alt="" class="img-responsive">
+                    <img src="/img/kws_images/kws_38.jpg" alt="" class="img-responsive">
                 </div>
             </div>
         </div>

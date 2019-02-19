@@ -55,17 +55,24 @@ LtAppAsset::register($this);
     <div class="container">
         <div class="row intro-text d-flex">
             <div class="col-md-4 intro-text-left d-flex align-items-center">
-                <h3><span class="color">Кремлевский</span> <br> <small>часовой сервис</small></h3>
-
+                <h3><span class="color">Кремлевский</span>
+                    часовой<br>
+                    сервис
+                </h3>
             </div>
             <div class="col-md-4 intro-text-center">
-                <img src="/img/Gerb-wt.png" style="max-width: 150px; margin: 15px 0">
-                <p><span class="color">часовая мастерская</span><br> никольская 17 строение 2</p>
-                <p class="phone"><a href="tel:84957990707">8 (495) 799 07 07</a> | <a href="tel:89037990707">8 (903) 799 07 07</a></p>
+                <img src="/img/Gerb-wt.png" style="max-width: 180px; margin: 15px 0">
+                <br>
                 <a href="<?= \yii\helpers\Url::to('/contact') ?>" class="btn btn-default btn-lg page-scroll">Оставить заявку</a>
+                <br>
+                <br>
+                <p class="phone"><a href="tel:84957990707">8 (495) 799 07 07</a> | <a href="tel:89037990707">8 (903) 799 07 07</a></p>
+                <p><span class="color">часовая мастерская</span><br> никольская 17/2</p>
             </div>
             <div class="col-md-4 intro-text-right d-flex align-items-center">
-                <h3><span class="color">Авторизованый</span> <br> <small>сервисный центр</small></h3>
+                <h3><span class="color">Авторизованый</span><br> сервисный <br> центр
+
+                </h3>
             </div>
         </div>
         </div>

@@ -2,6 +2,80 @@
 
 $this->title = 'Услуги Сервиса';
 $this->params['active'] = 'services';
+$services = [
+    (object)[
+        'src' => '/img/kws_images/kws_12.jpg',
+        'text' => 'Полный ремонт механизма часов',
+        'link' => '/site/price',
+    ],
+    (object)[
+        'src' => '/img/kws_images/kws_6.jpg',
+        'text' => 'Диагностика механизма механических и кварцевых часов.',
+        'link' => '/site/price',
+    ],
+    (object)[
+        'src' => '/img/kws_images/kws_36.jpg',
+        'text' => 'Профилактический осмотр и диагностика всех видов часов.',
+        'link' => '/site/price',
+    ],
+    (object)[
+        'src' => '/img/kws_images/kws_28.jpg',
+        'text' => 'Полировка корпусов и браслетов, в том числе из драгоценных металлов.',
+        'link' => '/site/price',
+    ],
+    (object)[
+        'src' => '/img/kws_images/kws_39.jpg',
+        'text' => 'Осуществляем ремонт циферблата наручных часов. Замена и изготовление циферблата.',
+        'link' => '/site/price',
+    ],
+    (object)[
+        'src' => '/img/kws_images/kws_22.jpg',
+        'text' => 'Ремонт стрелок наручных часов. Установка ранее имевшихся накладных знаков.',
+        'link' => '/site/price',
+    ],
+    (object)[
+        'src' => '/img/kws_images/kws_17.jpg',
+        'text' => 'Ремонт стрелок наручных часов. Установка ранее имевшихся накладных знаков.',
+        'link' => '/site/price',
+    ],
+    (object)[
+        'src' => '/img/kws_images/kws_23.jpg',
+        'text' => 'Проведение замены вышедших из строя элементов и узлов на оригинальные запчасти.',
+        'link' => '/site/price',
+    ],
+    (object)[
+        'src' => '/img/kws_images/kws_24.jpg',
+        'text' => 'Проверка часов на точность хода, с последующей регулировкой.',
+        'link' => '/site/price',
+    ],
+    (object)[
+        'src' => '/img/kws_images/kws_32.jpg',
+        'text' => 'Тестирование часов на герметичность и влагапроницаемость. Восстановление утраченной герметичности.',
+        'link' => '/site/price',
+    ],
+    (object)[
+        'src' => '/img/kws_images/kws_9.jpg',
+        'text' => 'Проводим ремонт и замену оригинальных сапфировых часовых стекол, изготавливаем стекла под заказ.',
+        'link' => '/site/price',
+    ],
+    (object)[
+        'src' => '/img/kws_images/kws_7.jpg',
+        'text' => 'Замена батареек в кварцевых и электромеханических часах.',
+        'link' => '/site/price',
+    ],
+    (object)[
+        'src' => '/img/kws_images/kws_33.jpg',
+        'text' => 'Закрепка драгоценных и полудрагоценных калиброванных камней на корпусе и браслете.',
+        'link' => '/site/price',
+    ],
+    (object)[
+        'src' => '/img/kws_images/kws_4.jpg',
+        'text' => 'Ручная гравировка:',
+        'link' => '/site/price',
+    ],
+
+];
+
 ?>
 <div id="second-section">
     <div class="container">
@@ -11,6 +85,18 @@ $this->params['active'] = 'services';
             <hr>
         </div>
         <div class="row">
+            <?php foreach ($services as $service): ?>
+                <div class="col-md-4">
+                    <div class="thumbnail second-thumbnail">
+                        <img src="<?= $service->src ?>" alt="Lights" style="width:100%">
+                        <div class="caption text-center">
+                            <h5>
+                                <a href="<?= \yii\helpers\Url::to($service->link) ?>"><?= $service->text ?></a>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach; ?>
             <div class="col-md-12">
                 <h4>Ремонт Часов</h4>
                 <p> <b>Сервисный центр</b>  по ремонту и обслуживанию швейцарских часов
@@ -64,6 +150,13 @@ $this->params['active'] = 'services';
                 <p>- <b>Цена работы зависит</b> от марки часов и сложности механизма. С примерной стоимостью вы можете ознакомиться в разделе <b>Стоимость Ремонта</b>.</p>
                 <p>- <b>На все проделанные работы</b> мы предоставляем гарантии. Гарантия при полном ремонте механизма составляет <b>12 месяцев</b>.</p>
                 <p>- <b>На установленные элементы</b> питания в часы, наш сервис дает фирменную <b>Гарантию 24 месяцев</b>.</p>
+                <hr style="width: 100%;">
+                <div class="text-center">
+                    <h5>Если у Вас возникли вопросы или затруднения, просто свяжитесь с нами и получите бесплатную
+                        консультацию по тел:</h5>
+                    <h2><a href="tel:84957990707">8 (495) 799 07 07</a> | <a href="tel:84993440400">8 (499) 344 04 00</a></h2>
+                    <a href="<?= \yii\helpers\Url::to('/contact') ?>" class="btn btn-default btn-lg page-scroll">Оставить заявку</a>
+                </div>
             </div>
         </div>
     </div>

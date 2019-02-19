@@ -1,8 +1,12 @@
 <?php
-
 /* @var $this yii\web\View */
 
-use yii\helpers\Html;
+function cmp($a, $b)
+{
+    $a = preg_replace('@^(a|an|the) @', '', $a);
+    $b = preg_replace('@^(a|an|the) @', '', $b);
+    return strcasecmp($a, $b);
+}
 
 $this->title = 'Стоимость Ремонта';
 $this->registerMetaTag([
@@ -18,6 +22,159 @@ $this->registerMetaTag([
     'content' => '/img/kremlinwatchservice.jpg'
 ]);
 $this->params['active'] = 'price';
+
+$brands = [
+    'ARMAND' => 'price4',
+    'NICOLET' => 'price4',
+    'BAUME' => 'price4',
+    'MERCIER' => 'price4',
+    'TAG' => 'price4',
+    'HEUER' => 'price4',
+    'CONCORD' => 'price4',
+    'TUDOR' => 'price4',
+    'RADO' => 'price4',
+    'PEQUIGNET' => 'price4',
+    'OMEGA' => 'price4',
+    'EBERHARD' => 'price4',
+    'JAGUAR' => 'price4',
+    'MONTBLANK' => 'price4',
+    'MAURICE' => 'price4',
+    'LACROIX' => 'price4',
+    'RAYMOND' => 'price4',
+    'WEIL' => 'price4',
+    'APELLA' => 'price4',
+    'GOLD' => 'price4',
+    'MOVADO' => 'price4',
+    'CHANEL' => 'price4',
+    'A.DUNHILL' => 'price4',
+    'ITD' => 'price4',
+    'CHAUMET' => 'price4',
+    'MILUS' => 'price4',
+    'KELEK' => 'price4',
+    'TECHNOMARINE' => 'price4',
+    'VAN DER BAUWEDE' => 'price4',
+    'AQUANAUTIC' => 'price4',
+
+
+    'BREITILING' => 'price5',
+    'BVLGARI' => 'price5',
+    'CARTIER' => 'price5',
+    'CORUM' => 'price5',
+    'EBEL' => 'price5',
+    'IWC' => 'price5',
+    'JEAN RICHARD' => 'price5',
+    'JORG HYSEK' => 'price5',
+    'PANERAI' => 'price5',
+    'PAUL PICOT' => 'price5',
+    'ROLEX' => 'price5',
+    'ULYSSE NARDIN' => 'price5',
+    'CFB' => 'price5',
+    'ZENITH' => 'price5',
+    'FORTIS' => 'price5',
+    'TUDOR' => 'price5',
+    'CARL F. BUCHERER' => 'price5',
+    'CHRONOSWISS' => 'price5',
+    'PERRELET' => 'price5',
+    'PORCHE DESIGN' => 'price5',
+    'CONCORD' => 'price5',
+    'DUBEY SHALDENBRAND' => 'price5',
+    'OMEGA' => 'price5',
+    'CHAUMET' => 'price5',
+    'VAN DER BAUWEDE' => 'price5',
+
+
+    'August Raymond' => 'price1',
+    'Mido' => 'price1',
+    'Longines' => 'price1',
+    'Edox' => 'price1',
+    'Eterna' => 'price1',
+    'Marvin' => 'price1',
+    'Nina Ricci' => 'price1',
+    'Oris' => 'price1',
+    'Revue Thommen' => 'price1',
+    'Frederique' => 'price1',
+    'Constant' => 'price1',
+    'Bulova' => 'price1',
+    'Jacques Lemans' => 'price1',
+    'Eterna' => 'price1',
+    'Maurice Lacroix' => 'price1',
+    'Jean Marcel' => 'price1',
+    'Busherer' => 'price1',
+    'K. Mozer' => 'price1',
+    'Сhristian Dior' => 'price1',
+    'Gustav' => 'price1',
+    'Becker' => 'price1',
+    'louis Erard' => 'price1',
+    'Paul Nickel' => 'price1',
+    'Michel Herbelin' => 'price1',
+
+    'Tissot' => 'price2',
+    'Charmex' => 'price2',
+    'Enicar Certina' => 'price2',
+    'Hugo Boss' => 'price2',
+    'Sector' => 'price2',
+    'Swiss Military' => 'price2',
+    'Festina' => 'price2',
+    'Apella' => 'price2',
+    'Continental' => 'price2',
+    'Cover' => 'price2',
+    'Swatch' => 'price2',
+    'Balmain' => 'price2',
+    'CK' => 'price2',
+    'Wenger' => 'price2',
+    'Olma' => 'price2',
+    'Doxa' => 'price2',
+    'Kolber' => 'price2',
+    'Philipp Laurence' => 'price2',
+    'Roamer' => 'price2',
+    'Titoni' => 'price2',
+    'Crovana' => 'price2',
+    'Fendi' => 'price2',
+    'Claude Bernard' => 'price2',
+    'Candino' => 'price2',
+    'Alfex' => 'price2',
+    'Atlantic' => 'price2',
+    'Cerutti' => 'price2',
+    'Emporio Armani' => 'price2',
+    'Roberto cavalli' => 'price2',
+
+    'AUDEMARS PIGUET' => 'price3',
+    'CARTIER' => 'price3',
+    'BLANCPAIN' => 'price3',
+    'BREGUET' => 'price3',
+    'CHOPARD' => 'price3',
+    'FRANK' => 'price3',
+    'MULLER' => 'price3',
+    'PATEK PHILIPPE' => 'price3',
+    'VACHERON' => 'price3',
+    'KONSTANTIN' => 'price3',
+    'PARMIGIANI' => 'price3',
+    'GIRARD PERREGAUX' => 'price3',
+    'JAEGER LE COOLTRE' => 'price3',
+    'ZENITH' => 'price3',
+    'GRAHAM' => 'price3',
+    'QUINTING' => 'price3',
+    'RICHARD MILLE' => 'price3',
+    'GERALD GENTA' => 'price3',
+    'ROGER DUBUIS' => 'price3',
+    'LOUIS MOINET' => 'price3',
+    'A. LANGE & SÖHNE' => 'price3',
+    'GLASHUTTE ORIGINAL' => 'price3',
+    'ARNOLD & SON' => 'price3',
+    'ROLEX' => 'price3',
+    'HUBLOT' => 'price3',
+
+];
+uksort($brands, 'cmp');
+$letters = \yii\helpers\ArrayHelper::getColumn(array_keys($brands), function ($item) {
+    $first = mb_strtolower(substr($item, 0, 1));
+    return preg_match('/\w+/', $first) ? mb_strtoupper($first) : false;
+});
+
+$letters = array_unique($letters);
+$letters = array_filter($letters);
+$letters = array_values($letters);
+sort($letters);
 ?>
 
 <div id="second-section">
@@ -29,181 +186,31 @@ $this->params['active'] = 'price';
         </div>
         <div class="row">
             <div class="col-md-12">
-<!--                <h4>Брэнды</h4>-->
+                <table class="table table-striped table-bordered">
+                    <tbody>
+                    <?php foreach ($letters as $k => $letter): ?>
+                        <tr>
+                            <th style="vertical-align: middle;"><h5><?= $letter ?></h5></th>
+                            <td>
+                                <?php foreach ($brands as $brand => $price): ?>
+                                    <?php if (substr(mb_strtoupper($brand), 0, 1) == $letter): ?>
+                                        <button
+                                                style="margin: 5px; border: none;"
+                                                type="button"
+                                                class="btn btn-default"
+                                                data-toggle="modal"
+                                                data-target="#<?= $price ?>">
+                                            <?= $brand; ?>
+                                        </button>
+                                    <?php else: continue; endif; ?>
+
+                                <?php endforeach; ?>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                    </tbody>
+                </table>
             </div>
-
-            <!-- price 4 -->
-
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price4">ARMAND</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price4">NICOLET</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price4">BAUME</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price4">MERCIER</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price4">TAG</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price4">HEUER</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price4">CONCORD</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price4">TUDOR</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price4">RADO</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price4">PEQUIGNET</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price4">OMEGA</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price4">EBERHARD</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price4">JAGUAR</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price4">MONTBLANK</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price4">MAURICE</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price4">LACROIX</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price4">RAYMOND</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price4">WEIL</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price4">APELLA</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price4">GOLD</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price4">MOVADO</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price4">CHANEL</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price4">A.DUNHILL</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price4">ITD</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price4">CHAUMET</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price4">MILUS</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price4">KELEK</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price4">TECHNOMARINE</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price4">VAN DER BAUWEDE</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price4">AQUANAUTIC</button>
-
-            <!-- price 5 -->
-
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price5">BREITILING</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price5">BVLGARI</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price5">CARTIER</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price5">CORUM</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price5">EBEL</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price5">IWC</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price5">JEAN RICHARD</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price5">JORG HYSEK</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price5">PANERAI</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price5">PAUL PICOT</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price5">ROLEX</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price5">ULYSSE NARDIN</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price5">CFB</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price5">ZENITH</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price5">FORTIS</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price5">TUDOR</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price5">CARL F. BUCHERER</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price5">CHRONOSWISS</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price5">PERRELET</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price5">PORCHE DESIGN</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price5">CONCORD</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price5">DUBEY SHALDENBRAND</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price5">OMEGA</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price5">CHAUMET</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price5">VAN DER BAUWEDE</button>
-
-
-
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price1">August Raymond</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price1">Mido</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price1">Longines</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price1">Edox</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price1">Eterna</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price1">Marvin
-            </button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price1">Nina
-                Ricci
-            </button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price1">Oris
-            </button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price1">Revue
-                Thommen
-            </button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price1">
-                Frederique
-            </button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price1">Constant
-            </button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price1">Bulova
-            </button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price1">Jacques
-                Lemans
-            </button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price1">Eterna
-            </button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price1">Maurice
-                Lacroix
-            </button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price1">Jean
-                Marcel
-            </button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price1">Busherer
-            </button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price1">K. Mozer
-            </button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price1">Сhristian
-                Dior
-            </button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price1">Gustav
-            </button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price1">Becker</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price1">louis Erard</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price1">Paul Nickel</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price1">Michel Herbelin</button>
-
-            <!-- price 2-->
-
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price2">Tissot</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price2">Charmex</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price2">Enicar Certina</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price2">Hugo Boss</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price2">Sector</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price2">Swiss Military</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price2">Festina</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price2">Apella</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price2">Continental</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price2">Cover</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price2">Swatch</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price2">Balmain</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price2">CK</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price2">Wenger</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price2">Olma</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price2">Doxa</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price2">Kolber</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price2">Philipp Laurence</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price2">Roamer</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price2">Titoni</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price2">Crovana</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price2">Fendi</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price2">Claude Bernard</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price2">Candino</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price2">Alfex</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price2">Atlantic</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price2">Cerutti</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price2">Emporio Armani</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price2">Roberto cavalli</button>
-
-            <!-- price 3-->
-
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price3">AUDEMARS PIGUET</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price3">CARTIER</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price3">BLANCPAIN</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price3">BREGUET</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price3">CHOPARD</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price3">FRANK</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price3">MULLER</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price3">PATEK PHILIPPE</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price3">VACHERON</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price3">KONSTANTIN</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price3">PARMIGIANI</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price3">GIRARD PERREGAUX</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price3">JAEGER LE COOLTRE</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price3">ZENITH</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price3">GRAHAM</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price3">QUINTING</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price3">RICHARD MILLE</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price3">GERALD GENTA</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price3">ROGER DUBUIS</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price3">LOUIS MOINET</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price3">A. LANGE & SÖHNE</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price3">GLASHUTTE ORIGINAL</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price3">ARNOLD & SON</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price3">ROLEX</button>
-            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#price3">HUBLOT</button>
-
-
-
         </div>
     </div>
 </div>
