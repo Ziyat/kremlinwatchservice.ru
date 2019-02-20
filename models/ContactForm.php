@@ -13,7 +13,6 @@ class ContactForm extends Model
     public $name;
     public $email;
     public $phone;
-    public $brand;
     public $text;
     public $verifyCode;
 
@@ -25,7 +24,7 @@ class ContactForm extends Model
     {
         return [
             // name, email, brand and text are required
-            [['name', 'email', 'brand', 'text','phone'], 'required'],
+            [['name', 'text','phone','email'], 'required'],
             // email has to be a valid email address
             ['email', 'email'],
             // verifyCode needs to be entered correctly
@@ -44,9 +43,9 @@ class ContactForm extends Model
     }
 
     /**
-     * Sends an email to the specified email address using the information collected by this model.
-     * @param string $email the target email address
-     * @return bool whether the model passes validation
+     * @param $email
+     * @return bool
+     * @throws \yii\base\InvalidParamException
      */
     public function contact($email)
     {
@@ -54,7 +53,7 @@ class ContactForm extends Model
             Yii::$app->mailer->compose()
                 ->setTo($email)
                 ->setFrom([$this->email => $this->name])
-                ->setSubject('Новая заявка на ремонт '.$this->brand)
+                ->setSubject('Новая заявка на ремонт')
                 ->setTextBody($this->name.PHP_EOL.$this->phone.PHP_EOL.$this->text)
                 ->send();
 

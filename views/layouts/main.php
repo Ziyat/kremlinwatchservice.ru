@@ -3,12 +3,11 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
-use app\widgets\Alert;
-use yii\helpers\Html;
-use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 use app\assets\HeadAppAsset;
 use app\assets\LtAppAsset;
+use app\widgets\Alert;
+use yii\helpers\Html;
 
 AppAsset::register($this);
 HeadAppAsset::register($this);
@@ -24,10 +23,31 @@ LtAppAsset::register($this);
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300;subset=cyrillic' rel='stylesheet' type='text/css'>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-N99LG9S');</script>
+    <!-- End Google Tag Manager -->
     <?php $this->head() ?>
 </head>
 <body>
 <?php $this->beginBody() ?>
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N99LG9S"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <nav id="menu" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -55,10 +75,7 @@ LtAppAsset::register($this);
     <div class="container">
         <div class="row intro-text d-flex">
             <div class="col-md-4 intro-text-left d-flex align-items-center">
-                <h3><span class="color">Кремлевский</span>
-                    часовой<br>
-                    сервис
-                </h3>
+                <h3>Кремлёвский часовой<br>сервис</h3>
             </div>
             <div class="col-md-4 intro-text-center">
                 <img src="/img/Gerb-wt.png" style="max-width: 180px; margin: 15px 0">
@@ -66,13 +83,12 @@ LtAppAsset::register($this);
                 <a href="<?= \yii\helpers\Url::to('/contact') ?>" class="btn btn-default btn-lg page-scroll">Оставить заявку</a>
                 <br>
                 <br>
-                <p class="phone"><a href="tel:84957990707">8 (495) 799 07 07</a> | <a href="tel:89037990707">8 (903) 799 07 07</a></p>
-                <p><span class="color">часовая мастерская</span><br> никольская 17/2</p>
+                <p class="phone"><a href="tel:84957990707" class="phones">8 (495) 799 07 07</a> | <a
+                            href="tel:84993440400" class="phones">8 (499) 344 04 00</a></p>
+                <p>Никольская, 17/2</p>
             </div>
             <div class="col-md-4 intro-text-right d-flex align-items-center">
-                <h3><span class="color">Авторизованый</span><br> сервисный <br> центр
-
-                </h3>
+                <h3>Авторизованный <br> сервисный <br> центр</h3>
             </div>
         </div>
         </div>
@@ -128,6 +144,8 @@ LtAppAsset::register($this);
             d.addEventListener("DOMContentLoaded", f, false);
         } else { f(); }
     })(document, window, "yandex_metrika_callbacks2");
+
+
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/50956268" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
@@ -136,3 +154,15 @@ LtAppAsset::register($this);
 </body>
 </html>
 <?php $this->endPage() ?>
+
+<?php
+
+$script = <<<JS
+$('.phones').on('click', function(){
+    ym(50956268, 'reachGoal', 'telClick');
+    gtag('event', 'telClick');
+});
+JS;
+
+$this->registerJs($script);
+

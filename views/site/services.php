@@ -154,7 +154,11 @@ $services = [
                 <div class="text-center">
                     <h5>Если у Вас возникли вопросы или затруднения, просто свяжитесь с нами и получите бесплатную
                         консультацию по тел:</h5>
-                    <h2><a href="tel:84957990707">8 (495) 799 07 07</a> | <a href="tel:84993440400">8 (499) 344 04 00</a></h2>
+                    <h2>
+                        <a href="tel:84957990707" class="phones">8 (495) 799 07 07</a>
+                        |
+                        <a href="tel:84993440400" class="phones">8 (499) 344 04 00</a>
+                    </h2>
                     <a href="<?= \yii\helpers\Url::to('/contact') ?>" class="btn btn-default btn-lg page-scroll">Оставить заявку</a>
                 </div>
             </div>

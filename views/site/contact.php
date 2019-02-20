@@ -5,9 +5,9 @@
 
 /* @var $model app\models\ContactForm */
 
-use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
+use yii\helpers\Html;
 
 $this->title = 'Контакты';
 $this->params['active'] = 'contact';
@@ -29,7 +29,7 @@ $this->params['active'] = 'contact';
                         8 (495) 799 07 07
                     </p>
                     <p><i class="fa fa-phone"></i>
-                        8 (903) 799 07 07
+                        8 (499) 344 04 00
                     </p>
                     <div class="space"></div>
                     <p><i class="fa fa-envelope-o"></i>didiamonds@mail.ru</p>
@@ -48,22 +48,20 @@ $this->params['active'] = 'contact';
 
                         <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
 
-                        <?= $form->field($model, 'name')->label('Ф.И.О')->textInput() ?>
+                        <?= $form->field($model, 'name')->label(false)->textInput(['placeholder' => 'Имя']) ?>
+                        <?= $form->field($model, 'phone')->label(false)->textInput(['placeholder' => 'Телефон:']) ?>
+                        <?= $form->field($model, 'email')->label(false)->textInput(['placeholder' => 'Эл. почта:']) ?>
+                        <?= $form->field($model, 'text')->label(false)->textarea(['rows' => 6, 'placeholder' => 'Опишите проблему']) ?>
 
-                        <?= $form->field($model, 'brand')->label('Марка часов') ?>
-
-                        <?= $form->field($model, 'email')->label('Эл. Почта') ?>
-                        <?= $form->field($model, 'phone')->label('Тел:') ?>
-
-                        <?= $form->field($model, 'text')->label('Опишите проблему')->textarea(['rows' => 6]) ?>
-
-                        <?= $form->field($model, 'verifyCode')->label('введите код с картинки')->widget(Captcha::className(), [
-                            'template' => '<div class="row"><div class="col-md-3">{image}</div><div class="col-md-6">{input}</div></div>',
+                        <?= $form->field($model, 'verifyCode')->label(false)->widget(Captcha::className(), [
+                            'template' => '{image}{input}',
+                            'options' => ['placeholder' => 'Введите проверочный код с картинки','class' => 'form-control'],
+                            'imageOptions' => ['class' => 'img-responsive', 'style' => 'width:30%; margin-bottom: 15px;']
                         ]) ?>
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <?= Html::submitButton('Отправить заявку', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
+                                    <?= Html::submitButton('Отправить заявку', ['id' => 'submit', 'class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
                                 </div>
                             </div>
 
@@ -92,3 +90,13 @@ $this->params['active'] = 'contact';
         </div>
     </div>
 </div>
+
+<?php
+
+$script = <<<JS
+$('#submit').on('click', function(){
+   ym(50956268, 'reachGoal', 'form');
+   gtag('event', 'form');
+});
+JS;
+$this->registerJs($script);

@@ -97,9 +97,8 @@ class SiteController extends Controller
 //    }
 
     /**
-     * Displays contact page.
-     *
-     * @return Response|string
+     * @return string|Response
+     * @throws \yii\base\InvalidParamException
      */
     public function actionContact()
     {
@@ -115,9 +114,8 @@ class SiteController extends Controller
     }
 
     /**
-     * Displays about page.
-     *
      * @return string
+     * @throws \yii\base\InvalidParamException
      */
     public function actionDictionary()
     {
