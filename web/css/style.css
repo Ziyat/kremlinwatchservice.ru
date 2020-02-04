@@ -53,6 +53,7 @@ header p {
     text-transform: capitalize;
 }
 
+
 @media (max-width: 460px) {
     .intro-text h1 {
         font-size: 40px !important;
@@ -267,6 +268,23 @@ header p {
     font-size: 30px;
     color: #eeeeee;
     font-weight: 600;
+}
+
+.intro-text .phone {
+    border: 1px solid #fff;
+    padding: 5px;
+    border-radius: 2px;
+    background-color: rgba(0, 185, 250, 0.15);
+    color: white;
+}
+
+.intro-text .phone a:hover {
+    color: white;
+}
+
+.intro-text .btn {
+    background-color: rgba(0, 185, 250, 0.15);
+    color: white;
 }
 
 .color {
@@ -679,5 +697,16 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
     vertical-align: middle;
     line-height: 1.4;
     text-transform: none;
+}
+
+.phone .shoko-phone-container .shoko-cover1 {
+    background: linear-gradient(82deg, transparent, #4a656f 38.66%) !important;
+    border-radius: 20px;
+}
+.phone .shoko-phone-container>.shoko-phone-cover>img{
+    filter: invert();
+}
+#contact-section .shoko-phone-container .shoko-cover1 {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #f4f4f4 52.1%) !important;
 }
 

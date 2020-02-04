@@ -163,7 +163,6 @@ $brands = [
     'ARNOLD & SON' => 'price3',
     'ROLEX' => 'price3',
     'HUBLOT' => 'price3',
-
 ];
 uksort($brands, 'cmp');
 $letters = \yii\helpers\ArrayHelper::getColumn(array_keys($brands), function ($item) {
@@ -175,6 +174,7 @@ $letters = array_unique($letters);
 $letters = array_filter($letters);
 $letters = array_values($letters);
 sort($letters);
+
 ?>
 
 <div id="second-section">
@@ -1032,7 +1032,6 @@ sort($letters);
                             <th>Замена люминисцентной массы на стрелках</th>
                             <td>От 1800</td>
                         </tr>
-
                         </tbody>
                     </table>
                 </div>
@@ -1077,8 +1076,6 @@ sort($letters);
                         <tr>
                             <th>Механический хронограф</th>
                             <td>25200</td>
-
-
                         </tr>
                         <tr>
                             <th>Механизм с накладным модулем</th>

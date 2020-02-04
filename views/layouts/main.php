@@ -59,10 +59,10 @@ LtAppAsset::register($this);
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li <?= $this->params['active'] == 'dictionary' ? 'class="active"' : '' ?>><a href="<?= \yii\helpers\Url::to('/dictionary') ?>" class="page-scroll">Cловарь Часовщика</a></li>
-                <li <?= $this->params['active'] == 'price' ? 'class="active"' : '' ?>><a href="<?= \yii\helpers\Url::to('/price') ?>" class="page-scroll">Стоимость Ремонта</a></li>
-                <li <?= $this->params['active'] == 'services' ? 'class="active"' : '' ?>><a href="<?= \yii\helpers\Url::to('/services') ?>" class="page-scroll">Услуги Сервиса</a></li>
-                <li <?= $this->params['active'] == 'contact' ? 'class="active"' : '' ?>><a href="<?= \yii\helpers\Url::to('/contact') ?>" class="page-scroll">Контакты</a></li>
+                <li <?= isset($this->params['active']) && $this->params['active'] == 'dictionary' ? 'class="active"' : '' ?>><a href="<?= \yii\helpers\Url::to('/dictionary') ?>" class="page-scroll">Cловарь Часовщика</a></li>
+                <li <?= isset($this->params['active']) && $this->params['active'] == 'price' ? 'class="active"' : '' ?>><a href="<?= \yii\helpers\Url::to('/price') ?>" class="page-scroll">Стоимость Ремонта</a></li>
+                <li <?= isset($this->params['active']) && $this->params['active'] == 'services' ? 'class="active"' : '' ?>><a href="<?= \yii\helpers\Url::to('/services') ?>" class="page-scroll">Услуги Сервиса</a></li>
+                <li <?= isset($this->params['active']) && $this->params['active'] == 'contact' ? 'class="active"' : '' ?>><a href="<?= \yii\helpers\Url::to('/contact') ?>" class="page-scroll">Контакты</a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -83,9 +83,10 @@ LtAppAsset::register($this);
                 <a href="<?= \yii\helpers\Url::to('/contact') ?>" class="btn btn-default btn-lg page-scroll">Оставить заявку</a>
                 <br>
                 <br>
-                <p class="phone"><a href="tel:84957990707" class="phones">8 (495) 799 07 07</a> | <a
-                            href="tel:84993440400" class="phones">8 (499) 344 04 00</a></p>
-                <p>Никольская, 17/2</p>
+                <p class="phone">
+                    <a target="_blank" href="tel:88007007959" class="phones">8 800 700 79 59</a> | <a target="_blank" href="https://wa.me/79037990707" class="phones">+7 903 799 07 07</a></p>
+                <p>Никольская, 10, БЦ Никольская Плаза <br> Этаж второй.
+                </p>
             </div>
             <div class="col-md-4 intro-text-right d-flex align-items-center">
                 <h3>Авторизованный <br> сервисный <br> центр</h3>
@@ -104,12 +105,8 @@ LtAppAsset::register($this);
     <div class="container">
         <div class="social">
             <ul>
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-vk"></i></a></li>
-                <!-- <li><a href="#"><i class="fa fa-dribbble"></i></a></li> -->
-                <!-- <li><a href="#"><i class="fa fa-github"></i></a></li> -->
-                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                <!-- <li><a href="#"><i class="fa fa-linkedin"></i></a></li> -->
+                <li><a href="https://vk.com/public167452355"><i class="fa fa-vk"></i></a></li>
+                <li><a href="https://www.instagram.com/kremlinwatchservice"><i class="fa fa-instagram"></i></a></li>
             </ul>
         </div>
     </div>
@@ -151,6 +148,22 @@ LtAppAsset::register($this);
 <!-- /Yandex.Metrika counter -->
 </div>
 <?php $this->endBody() ?>
+
+<!-- PhoneTrack counter -->
+<script type="text/javascript">
+    (function(w, d, e, h) {
+        var jsHost = (("https:" == w.location.protocol)? "https://": "http://") + h,
+            m = d.cookie.match(/(?:^|;)\s*_pt_uid=([^;]*)/), u = (m? decodeURIComponent(m[1]): ""),
+            s = d.createElement(e); s.async = 1; s.src = jsHost+"/api/shoko/client.js?cid=466046&uid="+u+"&src=";
+        if(m = d.cookie.match(/(?:^|;)\s*_pt_source=([^;]*)/)) {s.src += decodeURIComponent(m[1])}
+        else if(m = w.location.search.match(/(?:\?|&)utm_source=([^&]*)/i)) {s.src += decodeURIComponent(m[1])}
+        else if(d.referrer) {var r = d.referrer.replace(/^[a-z]+:\/\/([^\/]+).*$/, "$1");
+            if (r && r != w.location.host) {s.src += decodeURIComponent(r)}}
+        if(typeof w.replacePhoneNumbers === "undefined") {d.head.appendChild(s)}
+    })(window, document, "script", "services.completo.ru");
+</script>
+<!--// PhoneTrack counter -->
+
 </body>
 </html>
 <?php $this->endPage() ?>

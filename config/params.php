@@ -1,6 +1,5 @@
 <?php
 
 return [
-    'adminEmail' => 'info@kremlinwatchservice.ru',
-//    'adminEmail' => 'ilmondo-almaz@mail.ru',
+    'adminEmail' => ['termit_90@mail.ru', 'didiamonds@mail.ru'],
 ];

@@ -35,7 +35,7 @@ $services = [
     ],
     (object)[
         'src' => '/img/kws_images/kws_17.jpg',
-        'text' => 'Ремонт стрелок наручных часов. Установка ранее имевшихся накладных знаков.',
+        'text' => 'Подбор ремешка / Замена / Пошив ремешка.',
         'link' => '/site/price',
     ],
     (object)[
@@ -70,7 +70,17 @@ $services = [
     ],
     (object)[
         'src' => '/img/kws_images/kws_4.jpg',
-        'text' => 'Ручная гравировка:',
+        'text' => 'Ручная и лазерная гравировка',
+        'link' => '/site/price',
+    ],
+    (object)[
+        'src' => '/img/kws_images/kws_41.jpg',
+        'text' => 'Изготовление на заказ браслетов для часов из драгоценных металлов',
+        'link' => '/site/price',
+    ],
+    (object)[
+        'src' => '/img/kws_images/kws_42.jpg',
+        'text' => 'Изготовление коробок и боксов для часов и подарочной упаковки на заказ',
         'link' => '/site/price',
     ],
 
@@ -88,7 +98,8 @@ $services = [
             <?php foreach ($services as $service): ?>
                 <div class="col-md-4">
                     <div class="thumbnail second-thumbnail">
-                        <img src="<?= $service->src ?>" alt="Lights" style="width:100%">
+                        <img src="<?= $service->src ?>" alt="Lights"
+                             style="width: 100%; max-height: 217px; object-fit: cover;">
                         <div class="caption text-center">
                             <h5>
                                 <a href="<?= \yii\helpers\Url::to($service->link) ?>"><?= $service->text ?></a>

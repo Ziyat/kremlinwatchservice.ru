@@ -106,7 +106,7 @@ $this->params['active'] = '';
             <div class="col-md-6">
                 <div class="thumbnail">
                     <div class="caption text-center">
-                        <h4><a href="<?= \yii\helpers\Url::to('/site/services') ?>">ПОДБОРКА РЕМЕШКА / УЛЬТРОЗВУКОВАЯ ЧИСТКА</a></h4>
+                        <h4><a href="<?= \yii\helpers\Url::to('/site/services') ?>">ПОДБОРКА РЕМЕШКА / УЛЬТРАЗВУКОВАЯ ЧИСТКА</a></h4>
                         <p>Подбор и продажа ремешка или браслета для наручных часов. Ультразвуковая чистка, полировка браслетов и корпуса часов.</p>
                     </div>
                 </div>
@@ -133,6 +133,61 @@ $this->params['active'] = '';
         </div>
     </div>
 </section>
+<section style="background: #eeeeee; padding: 20px 0;">
+    <div class="container">
+        <h2 class="text-center">Нам доверяют</h2>
+        <div class="virticle-line"></div>
+        <div class="circle"></div>
+        <h3 class="text-center">На данный момент «Кремлёвский часовой сервис» является авторизированным сервисным центром таких компаний как:</h3>
+        <br>
+        <div class="row">
+            <div class="col-sm-2 col-sm-offset-1 text-center">
+                <a href="https://boscofamily.ru/brands/sublime-by-bosco.html">
+                    <img class="img-responsive" src="img/logos/SublimebyBosco.png" alt="">
+                </a>
+                <h3>Sublime by Bosco</h3>
+            </div>
+            <div class="col-sm-2 text-center">
+                <a href="https://www.chaumet.com/">
+                    <img class="img-responsive" src="img/logos/chaumet.jpg" alt="">
+                </a>
+                <h3>Chaumet</h3>
+            </div>
+            <div class="col-sm-2 text-center">
+                <a href="https://www.hstern.net/">
+                    <img class="img-responsive" src="img/logos/Pomellato.png" alt="">
+                </a>
+                <h3>Pomellato</h3>
+            </div>
+            <div class="col-sm-2 text-center">
+                <a href="http://www.pomellato.com/us/">
+                    <img class="img-responsive" src="img/logos/h.stern.png" alt="">
+                </a>
+                <h3>H.Stern</h3>
+            </div>
+            <div class="col-sm-2 text-center">
+                <a href="http://www.mauboussin.com">
+                    <img class="img-responsive" src="img/logos/mauboussin.jpg" alt="">
+                </a>
+                <h3>mauboussin</h3>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-sm-2 col-sm-offset-4 text-center">
+                <a href="http://www.pomellato.com/us/">
+                    <img class="img-responsive" src="img/logos/gourju.png" alt="">
+                </a>
+                <h3>Gourji</h3>
+            </div>
+            <div class="col-sm-2 text-center">
+                <a href="http://www.pomellato.com/us/">
+                    <img class="img-responsive" src="img/logos/tous.png" alt="">
+                </a>
+                <h3>Tous</h3>
+            </div>
+
+        </div> <!-- /.row -->
+    </div> <!-- /.container -->
+</section>
 <!-- Contact Section -->
 <div id="contact-section">
     <div class="container">
@@ -148,11 +203,11 @@ $this->params['active'] = '';
             <p><i class="fa fa-envelope-o"></i>didiamonds@mail.ru</p>
             <div class="space"></div>
             <p><i class="fa fa-phone"></i>
-                8 (495) 799 07 07
+                <a target="_blank" href="tel:88007007959" class="phones">8 800 700 79 59</a>
             </p>
             <div class="space"></div>
-            <p><i class="fa fa-phone"></i>
-                8 (499) 344 04 00
+            <p><i class="fa fa-whatsapp"></i>
+                <a target="_blank" href="https://wa.me/79037990707" class="phones">+7 903 799 07 07</a>
             </p>
         </div>
         <div class="col-md-8">
